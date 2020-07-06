@@ -11,18 +11,25 @@
     <title>Games-JS</title>
 
 </head>
-<script>
-function letScore() {
-    let score = 80;
-    if (score >= 90) {
-        console.log("YOU GET AN A")
-    } else {
-    console.log("YOU DIDNT GET AN A")
-    }
-}
-</script>
+
 
 <body>
+<script>
+function letScore(){
+    let score = 80,
+    if (score >= 90) {
+        console.log("YOU GET AN A")
+    }   
+
+    let randNum = Math.random();
+    if (randNum < 0.5) {
+        console.log("HEADS!")
+    }   else {
+        console.log("TAILS!")  
+    }
+}
+    letScore();
+</script>
 <h6>Hello</h6>
 
 
