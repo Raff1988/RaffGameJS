@@ -143,9 +143,41 @@ graphics.squareSize);
                 currentXoffset += graphics.squareSize;
              });
                 currentYoffset += graphics.squareSize;
-         })
-     }
- }
+         }):
+    },
+    draw: function(ctx, source, color) {
+        source.forEach(function(part) {
+            var partXlocation = part.x * graphics.squareSize;
+            var partYlocation = part.y * graphics.squareSize;
+            ctx.fillStyle = color;
+            ctx.fillRect(partXlocation, partYlocation, graphics.squareSize, graphics.squareSize);
+        });
+    },
+    drawGame: function() {
+        var ctx = graphics.canvas.getContext("2d");
+        ctx.clearRect(0,0, graphics.canvas.width, graphics.canvas.height);
+        graphics.drawBoard(ctx);
+        graphics.draw(ctx, game.fruit, "red");
+        graphics.draw(ctx, snake.parts, "green");
+    }
+ };
+ var gameControl = {
+     processInput: function(keyPressed) {
+         var key = keyPressed.key.toLowerCase();
+         var targetDirection = snake.facing;
+         if(key == "w" && snake.facing != "S") targetDirection = "N";
+         if(key == "a" && snake.facing != "E") targetDirection = "W";
+         if(key == "s" && snake.facing != "N") targetDirection = "S";
+         if(key == "d" && snake.facing != "W") targetDirection = "E";
+         snake.facing = targetDirection;
+         game.tick();
+    },
+    startGame: function () {
+        window.addEventListener("keypress", gameControl.processInput, false);
+        game.tick();
+    }
+ };
+ gameControl.startGame();
 </script>
 
 
