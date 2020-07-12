@@ -1,37 +1,17 @@
-.panel {
+.row {
+text-align: center;
+}
+
+.card {
+    display: inline-block;
     width: 100px;
     height: 100px;
-    display: inline-block;
+    background-color: #eeeeee;
+    cursor: pointer;
 }
 
-.bottom-left-panel {
-    background-color: red;
-    border-bottom-left-radius: 100%;
-}
-
-.bottom-right-panel {
-    background-color: green;
-    border-bottom-right-radius: 100%;
-}
-
-.top-left-panel {
-    background-color: pink;
-    border-top-left-radius: 100%;
-}
-
-.top-right-panel {
-    background-color: orange;
-    border-top-right-radius: 100%;
-}
-
-.middle-right-panel {
-    background-color: orange;
-    border-top-right-radius: 100%;
-}
-
-.middle-left-panel {
-    background-color: orange;
-    border-top-right-radius: 100%;
+.card:hover {
+    border: 2px solid;
 }
 
 .red {
@@ -42,10 +22,30 @@
     background-color: green;
 }
 
+.blue {
+    background-color: blue;
+}
+
 .white {
+    background-color: white;
+}
+
+.pink {
     background-color: pink;
+}
+
+.black {
+    background-color: black;
+}
+
+.purple {
+    background-color: purple;
 }
 
 .orange {
     background-color: orange;
+}
+
+.color-hidden {
+    background-color: #eeeeee;
 }
