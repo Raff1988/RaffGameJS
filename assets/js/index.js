@@ -1,6 +1,7 @@
 let clickedCard = null;
 let preventClick = false;
 
+
 function onCardClicked(e) {
 const target = e.currentTarget;
 
@@ -41,4 +42,10 @@ const target = e.currentTarget;
         clickedCard = null;
         }   
     }
+}
+function StopWatch(){
+
+  var startTime = null; 
+  var stopTime = null; 
+  var running = false; 
 }
