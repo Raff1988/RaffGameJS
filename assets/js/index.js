@@ -1,9 +1,11 @@
 let clickedCard = null;
+let preventClick = false;
 
 function onCardClicked(e) {
-    const target = e.currentTarget;
+const target = e.currentTarget;
 
     if (
+    preventClick ||
     target === clickedCard || 
     target.className.includes('done')
     ) {
@@ -24,21 +26,19 @@ function onCardClicked(e) {
         clickedCard.getAttribute('data-color') !== 
         target.getAttribute('data-color')
         ) {
-            console.log(' cards not equal');
-            setTimeout(() => {
-
-            clickedCard.className = 
-            clickedCard.className.replace('done', '').trim() + 
-            ' color-hidden';
-            target.className =
-            target.className.replace('done', '').trim() + 
-            ' color-hidden';
-            clickedCard = null;
-            }, 750);
-        } else {
-            clickedCard = null;
-        }
+        preventClick = true;
+        setTimeout(() => {
+        clickedCard.className = 
+        clickedCard.className.replace('done', '').trim() + 
+        ' color-hidden';
+        target.className =
+        target.className.replace('done', '').trim() + 
+        ' color-hidden';
         clickedCard = null;
-}
-
+        preventClick = false;
+             }, 750);
+        } else {
+        clickedCard = null;
+        }   
+    }
 }
