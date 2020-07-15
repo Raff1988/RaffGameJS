@@ -55,6 +55,55 @@
     background-color: orange;
 }
 
+.yellow {
+    background-color: yellow;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.indigo {
+    background-color: indigo;
+}
+
+.cyan {
+    background-color: cyan;
+}
+
+.AliceBlue {
+    background-color: AliceBlue;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.YellowGreen {
+    background-color: YellowGreen;
+}
+
+.coral {
+    background-color: coral;
+}
+
+.Chartreuse {
+    background-color: Chartreuse;
+}  
+
+.wheat {
+    background-color: wheat;
+} 
+
+.teal {
+    background-color: teal;
+}  
+
+
 .color-hidden {
     background-color: #eeeeee;
 }
