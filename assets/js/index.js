@@ -43,9 +43,3 @@ const target = e.currentTarget;
         }   
     }
 }
-function StopWatch(){
-
-  var startTime = null; 
-  var stopTime = null; 
-  var running = false; 
-}
