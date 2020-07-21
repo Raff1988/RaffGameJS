@@ -2,10 +2,6 @@
     text-align: center;
 }
 
-body {
-    background-color: moccasin;
-}
-
 .container {
     width: 400px;
 }
@@ -117,6 +113,13 @@ h1 {
 
 .image {
     text-align: center;
+}
+
+/*---------------------------------background*/
+body {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /*---------------------------------Footer*/
