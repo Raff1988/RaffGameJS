@@ -113,6 +113,12 @@ h1 {
     background-color: #eeeeee;
 }
 
+/*---------------------------------Images/Logos*/
+
+.image {
+    text-align: center;
+}
+
 /*---------------------------------Footer*/
 
 section {
