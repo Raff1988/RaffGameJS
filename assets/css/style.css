@@ -18,7 +18,7 @@ font-face {
 h1 {
     font-family: sevenSegment;
     font-size: 15em;
-    color: #969696;
+    color: #505050;
 }
 
 .container {
@@ -32,7 +32,7 @@ h1 {
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: #eeeeee;
+    background-color: #505050;
     cursor: pointer;
 }
 
@@ -117,7 +117,7 @@ h1 {
 
 /*---------------------------------background*/
 body {
-    background-image: url('../images/background.jpg');
+    background-image: url('../images/mem2.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -186,4 +186,31 @@ footer {
 .fa-instagram:hover {
     background-color: #125688;
     opacity: 0.7;
+}
+
+/*---------------------------------Footer*/
+
+.btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
 }

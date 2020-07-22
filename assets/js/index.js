@@ -1,27 +1,29 @@
-let clickedCard = null;
+let clickCard = null;
 let preventClick = false;
+document.addEventListener('DOMContentLoaded', () => {
+    const timeLeftDisplay = document.querySelector('#time-left')
+    const startBtn = document.querySelector('#start-button')
+    timeLeft = 10 
 
-var counter = 60;
-
-setInterval( function() {
-    counter--;
-
-    if (counter >= 0 ) {
-        id = document.getElementById("count");
-        id.innerHTML = counter;
+    function countDown() {
+        setInterval(function(){
+            if(timeLeft <= 0) {
+                clearInterval(timeLeft = 0)
+            }
+            timeLeftDisplay.innerHTML = timeLeft
+            timeLeft -=1
+        }, 1000)
     }
 
-    if (counter === 0) {
-        id.innerHTML = "TIME OVER;"
-    }
-}, 1000);
+    startBtn.addEventListener('click', countDown)
+})
 
 function onCardClicked(e) {
 const target = e.currentTarget;
 
     if (
     preventClick ||
-    target === clickedCard || 
+    target === clickCard || 
     target.className.includes('done')
     ) {
         return;
@@ -32,28 +34,28 @@ const target = e.currentTarget;
     .trim();
     target.className += ' done';
 
-    if (!clickedCard) {
+    if (!clickCard) {
 
-    clickedCard = target;
-    } else if (clickedCard) {
+    clickCard = target;
+    } else if (clickCard) {
 
     if (
-        clickedCard.getAttribute('data-color') !== 
+        clickCard.getAttribute('data-color') !== 
         target.getAttribute('data-color')
         ) {
         preventClick = true;
         setTimeout(() => {
-        clickedCard.className = 
-        clickedCard.className.replace('done', '').trim() + 
+        clickCard.className = 
+        clickCard.className.replace('done', '').trim() + 
         ' color-hidden';
         target.className =
         target.className.replace('done', '').trim() + 
         ' color-hidden';
-        clickedCard = null;
+        clickCard = null;
         preventClick = false;
              }, 750);
         } else {
-        clickedCard = null;
+        clickCard = null;
 
 
 
