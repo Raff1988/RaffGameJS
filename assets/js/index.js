@@ -1,22 +1,18 @@
 let clickCard = null;
 let preventClick = false;
-document.addEventListener('DOMContentLoaded', () => {
-    const timeLeftDisplay = document.querySelector('#time-left')
-    const startBtn = document.querySelector('#start-button')
-    timeLeft = 10 
 
-    function countDown() {
-        setInterval(function(){
-            if(timeLeft <= 0) {
-                clearInterval(timeLeft = 0)
-            }
-            timeLeftDisplay.innerHTML = timeLeft
-            timeLeft -=1
-        }, 1000)
-    }
 
-    startBtn.addEventListener('click', countDown)
-})
+var seconds = document.getElementById("countdown").textContent;
+var countdown = setInterval(function() {
+    seconds--;
+    document.getElementById("countdown").textContent = seconds;
+    if (seconds <= 0) {
+    clearInterval(countdown);
+    alert("You lose");
+}
+}, 1000) ;
+
+
 
 function onCardClicked(e) {
 const target = e.currentTarget;
