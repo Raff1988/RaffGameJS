@@ -2,15 +2,15 @@ let clickCard = null;
 let preventClick = false;
 
 
-var seconds = document.getElementById("countdown").textContent;
+var seconds = document.getElementById("countdown").textContent
 var countdown = setInterval(function() {
     seconds--;
     document.getElementById("countdown").textContent = seconds;
-    if (seconds <= 0) {
-    clearInterval(countdown);
-    alert("You lose");
-}
-}, 1000) ;
+    if (seconds < 1) {
+        clearInterval(countdown);
+        alert("You lose");
+    }
+}, 1000);
 
 
 
