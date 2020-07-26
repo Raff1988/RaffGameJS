@@ -2,10 +2,6 @@
     text-align: center;
 }
 
-.container {
-    width: 400px;
-}
-
 font-face {
     font-family: sevenSegment;
     src: url(seven-segment.ttf);
