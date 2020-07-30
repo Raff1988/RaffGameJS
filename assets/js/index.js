@@ -9,7 +9,7 @@ var countdown = setInterval(function() {
     if (seconds < 1) {
         clearInterval(countdown);
         alert("You lose");
-    }
+  }
 }, 1000);
 
 
@@ -51,7 +51,12 @@ const target = e.currentTarget;
         preventClick = false;
              }, 750);
         } else {
+            combosFound++;
         clickCard = null;
+        if (combosFound === 8) {
+            alert('You WIN');
+        }
+
 
 
 
