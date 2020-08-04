@@ -2,10 +2,17 @@
     text-align: center;
 }
 
+.container {
+    padding: auto;
+    margin: auto;
+}
+
+
 font-face {
     font-family: sevenSegment;
     src: url(seven-segment.ttf);
 }
+
 
 .headerlogo {
     text-align: center;
@@ -17,12 +24,7 @@ h1 {
     color: #505050;
 }
 
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 
 .card {
     display: inline-block;
@@ -128,7 +130,7 @@ body {
 /*---------------------------------Footer*/
 
 section {
-    min-height: 75vh;
+    min-height: 90vh;
 }
 
 footer {
@@ -193,5 +195,10 @@ footer {
 
 /*---------------------------------Button*/
 
+/*---------------------------------device*/
 
-
+@media print {
+  .container {
+    width: auto;
+  }
+}

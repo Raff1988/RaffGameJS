@@ -35,7 +35,7 @@ const target = e.currentTarget;
     clickCard = target;
     } else if (clickCard) {
 
-    if (
+        if (
         clickCard.getAttribute('data-color') !== 
         target.getAttribute('data-color')
         ) {
@@ -51,12 +51,7 @@ const target = e.currentTarget;
         preventClick = false;
              }, 750);
         } else {
-            combosFound++;
         clickCard = null;
-        if (combosFound === 8) {
-            alert('You WIN');
-        }
-
 
 
 
