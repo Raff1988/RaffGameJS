@@ -3,10 +3,8 @@
 }
 
 .container {
-    padding: auto;
-    margin: auto;
+    text-align: center;
 }
-
 
 font-face {
     font-family: sevenSegment;
@@ -30,7 +28,7 @@ h1 {
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: #505050;
+    background-color: #ffffff;
     cursor: pointer;
 }
 
@@ -104,7 +102,7 @@ h1 {
 }
 
 .color-hidden {
-    background-color: #eeeeee;
+    background-color: #A9A9A9;
 }
 
 /*---------------------------------Images/Logos*/
