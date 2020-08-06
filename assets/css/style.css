@@ -2,10 +2,6 @@
     text-align: center;
 }
 
-.container {
-    text-align: center;
-}
-
 font-face {
     font-family: sevenSegment;
     src: url(seven-segment.ttf);
@@ -200,3 +196,6 @@ footer {
     width: auto;
   }
 }
+
+/*---------------------------------Timer*/
+

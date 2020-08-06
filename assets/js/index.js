@@ -9,6 +9,10 @@ var countdown = setInterval(function() {
     if (seconds < 1) {
         clearInterval(countdown);
         alert("You lose");
+document.getElementById("reset").onclick = function() {
+  document.getElementById("countdown").value = "";
+};
+        
   }
 }, 1000);
 
