@@ -1,5 +1,6 @@
 let clickCard = null;
 let preventClick = false;
+var matchedCard = [];
 
 
 var seconds = document.getElementById("countdown").textContent;
@@ -9,6 +10,10 @@ var countdown = setInterval(function() {
     if (seconds < 1) {
         clearInterval(countdown);
         alert("You lose");
+      if (matchedCard.length == 12){
+        clearInterval(interval);
+        alert("Congratulations");
+   }
 document.getElementById("reset").onclick = function() {
   document.getElementById("countdown").value = "";
 };
