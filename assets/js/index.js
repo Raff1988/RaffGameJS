@@ -1,7 +1,14 @@
 let clickCard = null;
 let preventClick = false;
-var matchedCard = [];
+var countdown;
+var enablelose;
 
+
+function resetTime() {
+    clearTimeout(countdown);
+    countdown = setTimeout(enablelose, 5000);
+
+}
 
 var seconds = document.getElementById("countdown").textContent;
 var countdown = setInterval(function() {
