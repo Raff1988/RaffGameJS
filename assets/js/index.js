@@ -1,14 +1,10 @@
+//
 let clickCard = null;
 let preventClick = false;
+
+
 var countdown;
 var enablelose;
-
-
-function resetTime() {
-    clearTimeout(countdown);
-    countdown = setTimeout(enablelose, 5000);
-
-}
 
 var seconds = document.getElementById("countdown").textContent;
 var countdown = setInterval(function() {
@@ -17,10 +13,7 @@ var countdown = setInterval(function() {
     if (seconds < 1) {
         clearInterval(countdown);
         alert("You lose");
-      if (matchedCard.length == 12){
-        clearInterval(interval);
-        alert("Congratulations");
-   }
+
 document.getElementById("reset").onclick = function() {
   document.getElementById("countdown").value = "";
 };
@@ -29,6 +22,15 @@ document.getElementById("reset").onclick = function() {
 }, 1000);
 
 
+function resetTime() {
+    clearTimeout(countdown);
+    countdown = setTimeout(enablelose, 5000);
+
+}
+
+
+
+//The onCardClicked function was added so that the card that was clicked, then the card would be selected//**
 
 function onCardClicked(e) {
 const target = e.currentTarget;
@@ -42,6 +44,7 @@ const target = e.currentTarget;
     }
     
     target.className = target.className
+    //Added the replce function, allowed the cards color to show once we have clicked a color//**
     .replace('color-hidden', '')
     .trim();
     target.className += ' done';
